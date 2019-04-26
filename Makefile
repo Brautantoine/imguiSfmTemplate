@@ -5,7 +5,6 @@ SRC_PATH = src
 BUILD_PATH = _build
 BIN_PATH = $(BUILD_PATH)/bin
 INSTALL_LOC ?= /usr/bin
-RESSOURCES_DEST ?= /usr/share/klt
 CURRENT_DIR = $(shell pwd)
 
 # executable #
@@ -63,7 +62,7 @@ all: $(BIN_PATH)/$(BIN_NAME)
 # Creation of the executable
 $(BIN_PATH)/$(BIN_NAME): $(OBJECTS)
 	@echo "	LD $@"
-	$(CXX) $(OBJECTS) $(LIBS_PATH) -o $@ $(LIBS)
+	@$(CXX) $(OBJECTS) $(LIBS_PATH) -o $@ $(LIBS)
 
 # Add dependency files, if they exist
 -include $(DEPS)

@@ -42,3 +42,6 @@ _*
 *.zip
 *.7z
 *.rar
+
+# Imgui config file
+*.ini
